@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8654B91515E1F5B500495BB6 /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8654B91415E1F5B500495BB6 /* APIClient.m */; };
 		86A535D515E1EB5D0019CDC7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A535D415E1EB5D0019CDC7 /* UIKit.framework */; };
 		86A535D715E1EB5D0019CDC7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A535D615E1EB5D0019CDC7 /* Foundation.framework */; };
 		86A535D915E1EB5D0019CDC7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A535D815E1EB5D0019CDC7 /* CoreGraphics.framework */; };
@@ -30,7 +31,6 @@
 		86A5362615E1EB7E0019CDC7 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A5361A15E1EB7E0019CDC7 /* AFURLConnectionOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		86A5362715E1EB7E0019CDC7 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A5361C15E1EB7E0019CDC7 /* AFXMLRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		86A5362815E1EB7E0019CDC7 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A5361E15E1EB7E0019CDC7 /* UIImageView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		86A5363815E1ECDD0019CDC7 /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A5363715E1ECDD0019CDC7 /* APIClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8654B91315E1F5B500495BB6 /* APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIClient.h; sourceTree = "<group>"; };
+		8654B91415E1F5B500495BB6 /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIClient.m; sourceTree = "<group>"; };
 		86A535D015E1EB5D0019CDC7 /* SenTestingKitIssue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SenTestingKitIssue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86A535D415E1EB5D0019CDC7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		86A535D615E1EB5D0019CDC7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -83,8 +85,6 @@
 		86A5361C15E1EB7E0019CDC7 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
 		86A5361D15E1EB7E0019CDC7 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		86A5361E15E1EB7E0019CDC7 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
-		86A5363615E1ECDD0019CDC7 /* APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIClient.h; sourceTree = "<group>"; };
-		86A5363715E1ECDD0019CDC7 /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,8 +144,8 @@
 		86A535DA15E1EB5D0019CDC7 /* SenTestingKitIssue */ = {
 			isa = PBXGroup;
 			children = (
-				86A5363615E1ECDD0019CDC7 /* APIClient.h */,
-				86A5363715E1ECDD0019CDC7 /* APIClient.m */,
+				8654B91315E1F5B500495BB6 /* APIClient.h */,
+				8654B91415E1F5B500495BB6 /* APIClient.m */,
 				86A5360915E1EB7E0019CDC7 /* AFNetworking */,
 				86A535E315E1EB5D0019CDC7 /* AppDelegate.h */,
 				86A535E415E1EB5D0019CDC7 /* AppDelegate.m */,
@@ -334,7 +334,7 @@
 				86A5362615E1EB7E0019CDC7 /* AFURLConnectionOperation.m in Sources */,
 				86A5362715E1EB7E0019CDC7 /* AFXMLRequestOperation.m in Sources */,
 				86A5362815E1EB7E0019CDC7 /* UIImageView+AFNetworking.m in Sources */,
-				86A5363815E1ECDD0019CDC7 /* APIClient.m in Sources */,
+				8654B91515E1F5B500495BB6 /* APIClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +458,7 @@
 		86A5360715E1EB5D0019CDC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SenTestingKitIssue.app/SenTestingKitIssue";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
@@ -475,6 +476,7 @@
 		86A5360815E1EB5D0019CDC7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SenTestingKitIssue.app/SenTestingKitIssue";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
@@ -508,6 +510,7 @@
 				86A5360515E1EB5D0019CDC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		86A5360615E1EB5D0019CDC7 /* Build configuration list for PBXNativeTarget "SenTestingKitIssueTests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +519,7 @@
 				86A5360815E1EB5D0019CDC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
