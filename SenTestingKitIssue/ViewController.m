@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "APIClient.h"
 
 @interface ViewController ()
 
@@ -31,4 +32,12 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+- (IBAction)TestRequest:(id)sender {
+    [[APIClient sharedClient] getPath:@"timezoneJSON" parameters:nil success:^(AFHTTPRequestOperation *operation, id JSON) {
+        NSLog(@"Success: %@", JSON);
+                        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error");
+    }];
+}
 @end
