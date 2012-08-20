@@ -1,32 +1,31 @@
-//
-//  SenTestingKitIssueTests.m
-//  SenTestingKitIssueTests
-//
-//  Created by Stanislaw Pankevich on 8/20/12.
-//  Copyright (c) 2012 Stanislaw Pankevich. All rights reserved.
-//
+#import <SenTestingKit/SenTestingKit.h>
+#import <APIClient.h>
 
-#import "SenTestingKitIssueTests.h"
+@interface SenTestingKitIssueTests : SenTestCase
+
+@end
 
 @implementation SenTestingKitIssueTests
 
-- (void)setUp
+- (void)testTestRequest
 {
-    [super setUp];
+    NSLog(@"Beginning");
+    dispatch_semaphore_t sema = dispatch_semaphore_create(0);
     
-    // Set-up code here.
-}
-
-- (void)tearDown
-{
-    // Tear-down code here.
+    [[APIClient sharedClient] getPath:@"timezoneJSON" parameters:nil success:^(AFHTTPRequestOperation *operation, id JSON) {
+        NSLog(@"Success");
+        
+        STAssertTrue(TRUE, @"Authenticate result should be YES");
+        
+        dispatch_semaphore_signal(sema);
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error");
+    }];
     
-    [super tearDown];
-}
+    dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+    dispatch_release(sema);
 
-- (void)testExample
-{
-    STFail(@"Unit tests are not implemented yet in SenTestingKitIssueTests");
 }
 
 @end
