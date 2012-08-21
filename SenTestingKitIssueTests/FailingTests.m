@@ -1,13 +1,13 @@
 #import <SenTestingKit/SenTestingKit.h>
 #import <APIClient.h>
 
-@interface SenTestingKitIssueTests : SenTestCase
+@interface FailingTests : SenTestCase
 
 @end
 
-@implementation SenTestingKitIssueTests
+@implementation FailingTests
 
-// Both below begin to hang
+// Both below will begin to hang
 
 //- (void)testTestRequestUsingDispatchSemaphore
 //{
@@ -28,22 +28,22 @@
 //    dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
 //    dispatch_release(sema);
 //}
-
-- (void)testTestRequestUsingDispatchSync
-{
-    NSLog(@"Beginning");
-
-    dispatch_sync(dispatch_get_main_queue(), ^{
-        [[APIClient sharedClient] getPath:@"timezoneJSON" parameters:nil success:^(AFHTTPRequestOperation *operation, id JSON) {
-            NSLog(@"\nSuccess");
-
-
-        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-            NSLog(@"\nError");
-        }];
-    });
-    
-    STAssertTrue(TRUE, @"Authenticate result should be YES");
-}
+//
+//- (void)testTestRequestUsingDispatchSync
+//{
+//    NSLog(@"Beginning");
+//
+//    dispatch_sync(dispatch_get_main_queue(), ^{
+//        [[APIClient sharedClient] getPath:@"timezoneJSON" parameters:nil success:^(AFHTTPRequestOperation *operation, id JSON) {
+//            NSLog(@"\nSuccess");
+//
+//
+//        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//            NSLog(@"\nError");
+//        }];
+//    });
+//    
+//    STAssertTrue(TRUE, @"Authenticate result should be YES");
+//}
 
 @end

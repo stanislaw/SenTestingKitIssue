@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8602274E15E43F2100C65032 /* CorrectFormedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8602274D15E43F2100C65032 /* CorrectFormedTests.m */; };
 		8654B91515E1F5B500495BB6 /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8654B91415E1F5B500495BB6 /* APIClient.m */; };
 		86A535D515E1EB5D0019CDC7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A535D415E1EB5D0019CDC7 /* UIKit.framework */; };
 		86A535D715E1EB5D0019CDC7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A535D615E1EB5D0019CDC7 /* Foundation.framework */; };
@@ -20,7 +21,7 @@
 		86A535F415E1EB5D0019CDC7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A535D415E1EB5D0019CDC7 /* UIKit.framework */; };
 		86A535F515E1EB5D0019CDC7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A535D615E1EB5D0019CDC7 /* Foundation.framework */; };
 		86A535FD15E1EB5D0019CDC7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 86A535FB15E1EB5D0019CDC7 /* InfoPlist.strings */; };
-		86A5360015E1EB5D0019CDC7 /* SenTestingKitIssueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A535FF15E1EB5D0019CDC7 /* SenTestingKitIssueTests.m */; };
+		86A5360015E1EB5D0019CDC7 /* FailingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A535FF15E1EB5D0019CDC7 /* FailingTests.m */; };
 		86A5361F15E1EB7E0019CDC7 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A5360B15E1EB7E0019CDC7 /* AFHTTPClient.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		86A5362015E1EB7E0019CDC7 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A5360D15E1EB7E0019CDC7 /* AFHTTPRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		86A5362115E1EB7E0019CDC7 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A5360F15E1EB7E0019CDC7 /* AFImageRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8602274D15E43F2100C65032 /* CorrectFormedTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CorrectFormedTests.m; sourceTree = "<group>"; };
 		8654B91315E1F5B500495BB6 /* APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIClient.h; sourceTree = "<group>"; };
 		8654B91415E1F5B500495BB6 /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIClient.m; sourceTree = "<group>"; };
 		86A535D015E1EB5D0019CDC7 /* SenTestingKitIssue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SenTestingKitIssue.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,7 +65,7 @@
 		86A535F215E1EB5D0019CDC7 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		86A535FA15E1EB5D0019CDC7 /* SenTestingKitIssueTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SenTestingKitIssueTests-Info.plist"; sourceTree = "<group>"; };
 		86A535FC15E1EB5D0019CDC7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		86A535FF15E1EB5D0019CDC7 /* SenTestingKitIssueTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SenTestingKitIssueTests.m; sourceTree = "<group>"; };
+		86A535FF15E1EB5D0019CDC7 /* FailingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FailingTests.m; sourceTree = "<group>"; };
 		86A5360A15E1EB7E0019CDC7 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		86A5360B15E1EB7E0019CDC7 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		86A5360C15E1EB7E0019CDC7 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -171,7 +173,8 @@
 		86A535F815E1EB5D0019CDC7 /* SenTestingKitIssueTests */ = {
 			isa = PBXGroup;
 			children = (
-				86A535FF15E1EB5D0019CDC7 /* SenTestingKitIssueTests.m */,
+				8602274D15E43F2100C65032 /* CorrectFormedTests.m */,
+				86A535FF15E1EB5D0019CDC7 /* FailingTests.m */,
 				86A535F915E1EB5D0019CDC7 /* Supporting Files */,
 			);
 			path = SenTestingKitIssueTests;
@@ -342,7 +345,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86A5360015E1EB5D0019CDC7 /* SenTestingKitIssueTests.m in Sources */,
+				86A5360015E1EB5D0019CDC7 /* FailingTests.m in Sources */,
+				8602274E15E43F2100C65032 /* CorrectFormedTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
